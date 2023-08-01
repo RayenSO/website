@@ -1,0 +1,25 @@
+.foot {
+    display: flex; /* Utilise Flexbox pour centrer le contenu */
+    flex-direction: column; /* Place les éléments en colonne */
+    width: 100%;
+    margin-left:40%;
+}
+
+.foot h1{
+    font-family: poppins-semibold,poppins,sans-serif;
+    margin: 0;
+}
+
+.foot p{
+    margin:5px;
+}
+
+.foot a{
+    text-decoration: none;
+  }
+  
+  .social-icons a img {
+    width: 30px; /* Ajustez la taille des icônes selon vos préférences */
+    height: 30px;
+  }
+  
