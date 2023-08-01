@@ -14,12 +14,40 @@
     margin:5px;
 }
 
-.foot a{
+.link-hp{
     text-decoration: none;
+    
   }
   
-  .social-icons a img {
-    width: 30px; /* Ajustez la taille des icônes selon vos préférences */
-    height: 30px;
-  }
+.social-icons a img {
+width: 30px; /* Ajustez la taille des icônes selon vos préférences */
+height: 30px;
+}
+
+a:link,
+a:visited {
+  color: #000; /* Couleur des liens non visités et visités (bleu dans cet exemple) */
   
+}
+
+a:hover,
+a:active {
+  color: #000; /* Couleur des liens survolés et actifs (rouge dans cet exemple) */
+}
+  
+.footer-link{
+    padding-top: 10px;
+    font-weight: normal;
+    
+}
+
+.bold{
+    font-weight: bolder;
+    text-decoration: underline;
+}
+
+.extra-link{
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+}

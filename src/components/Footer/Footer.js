@@ -9,7 +9,7 @@ function Footer() {
       <div className="foot">
         <h1>RenaClic</h1>
         <p>47-83 Boulevard de l'Hôpital, 75013 Paris</p>
-        <a href="http://pitiesalpetriere.aphp.fr/">http://pitiesalpetriere.aphp.fr</a>
+        <a href="http://pitiesalpetriere.aphp.fr/" className='link-hp'>http://pitiesalpetriere.aphp.fr</a>
         <p>01 42 16 00 00</p>
 
         <div className="social-icons">
@@ -23,13 +23,14 @@ function Footer() {
             <img src={FacebookIcon} alt="Facebook" />
           </a>
         </div>
-
-        <a href="/qui-sommes-nous" className="footer-link">
-          Qui sommes-nous
-        </a>
-        <a href="/conditions-d-utilisation" className="footer-link">
-          Conditions d'utilisation
-        </a>
+        <div className='extra-link'>
+          <a href="/qui-sommes-nous" className="footer-link bold">
+            Qui sommes-nous
+          </a>
+          <a href="/conditions-d-utilisation" className="footer-link bold">
+            Conditions d'utilisation
+          </a>
+        </div>
       </div>
     </footer>
   );

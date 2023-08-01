@@ -38,6 +38,8 @@ function Accueil() {
 
   const [showPopup, setShowPopup] = useState(true);
 
+  
+
   return ( 
     <div className="accueil-content">
       {/* Popup d'accueil*/}
