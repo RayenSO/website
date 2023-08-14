@@ -1,78 +1,99 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { FaBars, FaTimes } from "react-icons/fa";
+import Menu from '../Menus/Menu';
+import HamburgerMenu from '../Menus/HamburgerMenu';
+import { HiChevronRight } from 'react-icons/hi';
 
 
 function Header() {
+  const [isMenuOpen, setMenuOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
+  const toggleMenu = () => {
+    setMenuOpen(!isMenuOpen);
+  };
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   return (
-    <header className="fixed-menu">
-       <div className="header-top">
-        <a href="/">Mon Compte</a>
-        <a href="/">Pro</a>
-      </div>
-      <nav className='menu'>
-      
-      <div className="site-name">
-          <strong>RenaClic</strong>
-        </div>
-        <div class="dropdown">
-          <button class="dropbtn">A PROPOS DES REINS</button>
-          <div class="dropdown-content">
-            <a href="/les-reins-et-leurs-fonctions">Les reins et leurs fonctions</a>
-            <a href="/les-maladies-renales">Les maladies rénales</a>
-          </div>
-        </div>
-        
-        <div class="dropdown">
-          <button class="dropbtn">PREVENTION</button>
-          <div class="dropdown-content">
-            <a href="/depistage">Dépistage</a>
-            <a href="/protéger-ses-reins">Protéger ses reins</a>
-          </div>
-        </div>
-        
-        <div class="dropdown">
-          <button class="dropbtn">LES TRAITEMENTS DE SUPPLEANCE</button>
-          <div class="dropdown-content">
-            <a href="/avant-la-dialyse-et-la-greffe">Avant la dialyse et la greffe</a>
-            <a href="/la-dialyse">la dialyse</a>
-            <a href="/la-greffe">la greffe</a>
-            <a href="/aide-au-choix">Aide au choix</a>
-          </div>
-        </div>
-        
-        <div class="dropdown">
-          <button class="dropbtn">VIVRE AVEC LA MALADIE </button>
-          <div class="dropdown-content">
-            <a href="/vie-et-organisation-au-quotidien">Vie et organisation au quotidien</a>
-            <a href="/grossesse-et-information-pour-la-femmme">Grossesse et information pour la femme </a>
-            <a href="/gérer-son-insuffisance-rénale">Gérer son insuffisance rénale</a>
-            <a href="/positive-attitude">Positive attitude</a>
-            <a href="/droits-sociaux">Droits sociaux </a>
-          </div>
-        </div>
-        <div class="dropdown">
-          <a href="/nutrition"><button class="dropbtn">NUTRITION </button></a> 
-        </div>
-        
-        <div class="dropdown">
-          <a href="//mon-parcours"><button class="dropbtn">MON PARCOURS </button></a> 
-        </div>
+    <header className='menu'>
+      <div className={`line-1 ${isMobile ? 'mobile-layout' : 'desktop-layout'}`}>
+        <button className="header-button button button-1">
+          <HiChevronRight className="button-icon" />
+          <span className="button-text">Taille du texte TTTT</span>
+        </button>
+        {isMobile ? (
+          <div className='log-menu'>
+            <div className="logo">
+              RenaClic
+              <button className={`toggle ${isMenuOpen ? 'button-close' : 'button-open'}`} onClick={toggleMenu}>
+                {isMenuOpen ? <FaTimes /> : <FaBars />}
+              </button>
+            </div>
 
-        <div class="dropdown">
-          <button class="dropbtn">POUR EN SAVOIR PLUS </button>
-          <div class="dropdown-content">
-            <a href="/documentation">Documentation</a>
-            <a href="/echanges">Echanges </a>
-            <a href="/temoignages">Temoignages</a>
-           
           </div>
-        </div>
-        <input class="input" name="text" placeholder="Search..." type="search"></input>
-      </nav>
-      
+        ) : (
+          <div className="button-container">
+            <button className=" header-button button">
+              <HiChevronRight className="button-icon" />
+              <span className="button-text">Vous êtes un patient ?</span>
+            </button>
+            <button className="header-button button">
+              <HiChevronRight className="button-icon" />
+              <span className="button-text">Vous êtes un professionnel ?</span>
+            </button>
+          </div>
+        )}
+      </div>
+      <div className={`line-2 ${isMobile ? 'mobile-layout' : 'desktop-layout'}`}>
+        {isMobile ? (
+          <>
+            <div className="button-container">
+              <button className="header-button button">
+                <HiChevronRight className="button-icon" />
+                <span className="button-text">Vous êtes un patient ?</span>
+              </button>
+              <button className="header-button button">
+                <HiChevronRight className="button-icon" />
+                <span className="button-text">Vous êtes un professionnel ?</span>
+              </button>
+            </div>
+            <Menu className='classique-menu' />
+            <HamburgerMenu isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} className='hamburger-menu' />
+            <input type="text" className="search-bar" placeholder="Recherche" />
+          </>
+        ) : (
+          <>
+            <div className='log-menu'>
+              <div className="logo">
+                RenaClic
+                <button className={`toggle ${isMenuOpen ? 'button-close' : 'button-open'}`} onClick={toggleMenu}>
+                  {isMenuOpen ? <FaTimes /> : <FaBars />}
+                </button>
+              </div>
+            </div>
+            <Menu className='classique-menu' />
+            <HamburgerMenu isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} className='hamburger-menu' />
+            <input type="text" className="search-bar" placeholder="Recherche" />
+          </>
+        )}
+      </div>
     </header>
   );
 }
 
 export default Header;
+
+
+
+

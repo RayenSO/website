@@ -5,7 +5,7 @@ import TwitterIcon from '../../images/twitter.png';
 import FacebookIcon from '../../images/facebook.png';
 function Footer() {
   return (
-    <footer>
+    <footer className='footer'>
       <div className="foot">
         <h1>RenaClic</h1>
         <p>47-83 Boulevard de l'Hôpital, 75013 Paris</p>

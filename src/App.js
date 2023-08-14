@@ -3,31 +3,32 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import Accueil from './pages/Accueil/Accueil';
-import ReinsFonctions from './pages/AProposReins/ReinsFonctions';
-import MaladieRenales from './pages/AProposReins/MaladiesRenales';
-import Depistage from './pages/Prevention/Depistage';
-import ProtegerReins from './pages/Prevention/ProtegerReins';
-import AvantDialyseEtGreffe from './pages/Traitements/AvantDialyseGreffe';
-import Dialyse from './pages/Traitements/Dialyse';
-import Greffe from './pages/Traitements/Greffe';
-import AideChoix from './pages/Traitements/AideAuChoix';
-import VieQuotidienne from './pages/VieMaladie/VieQuotidienne';
-import VieGrossesse from './pages/VieMaladie/VieGrossesse';
-import GestionInsuffisance from './pages/VieMaladie/GestionInsuffisance';
-import PositiveAttitude from './pages/VieMaladie/PositiveAttitude';
-import DroitsSociaux from './pages/VieMaladie/DroisSociaux';
-import Nutrition from './pages/Nutrition/Nutrition';
-import MonParcours from './pages/MonParcours/MonParcours';
-import Documentation from './pages/Plus/Documentation'
-import Echanges from './pages/Plus/Echanges';
-import Temoignagnes from './pages/Plus/Temoignages';
+import {ReinsFonctions} from './pages/AProposReins/ReinsFonctions';
+import {MaladieRenales} from './pages/AProposReins/MaladiesRenales';
+import {Depistage} from './pages/Prevention/Depistage';
+import {ProtegerReins} from './pages/Prevention/ProtegerReins';
+import {AvantDialyseEtGreffe} from './pages/Traitements/AvantDialyseGreffe';
+import {Dialyse} from './pages/Traitements/Dialyse';
+import {Greffe} from './pages/Traitements/Greffe';
+import {AideChoix} from './pages/Traitements/AideAuChoix';
+import {VieQuotidienne} from './pages/VieMaladie/VieQuotidienne';
+import {VieGrossesse} from './pages/VieMaladie/VieGrossesse';
+import {GestionInsuffisance} from './pages/VieMaladie/GestionInsuffisance';
+import {PositiveAttitude} from './pages/VieMaladie/PositiveAttitude';
+import {DroitsSociaux} from './pages/VieMaladie/DroisSociaux';
+import {Nutrition} from './pages/Nutrition/Nutrition';
+import {MonParcours} from './pages/MonParcours/MonParcours';
+import {Documentation} from './pages/Plus/Documentation'
+import {Echanges} from './pages/Plus/Echanges';
+import {Temoignagnes} from './pages/Plus/Temoignages';
 
 function App() {
   return (
+    <React.Fragment>
     <Router>
       <Header />
       <Routes>
-        <Route path="/" element={<Accueil />} />
+        <Route path="/" element={<Accueil />} />  
         <Route path="/les-reins-et-leurs-fonctions" element={<ReinsFonctions />} />
         <Route path="/les-maladies-renales" element={<MaladieRenales />} />
         <Route path="/depistage" element={<Depistage />} />
@@ -49,6 +50,8 @@ function App() {
       </Routes>
       <Footer />
     </Router>
+
+    </React.Fragment>
   );
 }
 
