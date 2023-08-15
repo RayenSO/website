@@ -17,7 +17,10 @@
 	font-size: 30px;
 	font-weight: bold;
 }
-
+.button-text,
+.logo-link{
+	text-decoration: none;
+}
 .menu-icon {
 	display: none;
 }

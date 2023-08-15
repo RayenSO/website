@@ -9,6 +9,7 @@ function Header() {
   const [isMenuOpen, setMenuOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
+  
   const toggleMenu = () => {
     setMenuOpen(!isMenuOpen);
   };
@@ -35,7 +36,7 @@ function Header() {
         {isMobile ? (
           <div className='log-menu'>
             <div className="logo">
-              RenaClic
+              <a href='/' className='logo-link'>RenaClic</a>
               <button className={`toggle ${isMenuOpen ? 'button-close' : 'button-open'}`} onClick={toggleMenu}>
                 {isMenuOpen ? <FaTimes /> : <FaBars />}
               </button>
@@ -44,9 +45,9 @@ function Header() {
           </div>
         ) : (
           <div className="button-container">
-            <button className=" header-button button">
+            <button  className=" header-button button">
               <HiChevronRight className="button-icon" />
-              <span className="button-text">Vous êtes un patient ?</span>
+              <a href='/login' className="button-text">Vous êtes un patient ?</a>
             </button>
             <button className="header-button button">
               <HiChevronRight className="button-icon" />
@@ -59,7 +60,7 @@ function Header() {
         {isMobile ? (
           <>
             <div className="button-container">
-              <button className="header-button button">
+              <button href='/login' className="header-button button">
                 <HiChevronRight className="button-icon" />
                 <span className="button-text">Vous êtes un patient ?</span>
               </button>
@@ -76,7 +77,7 @@ function Header() {
           <>
             <div className='log-menu'>
               <div className="logo">
-                RenaClic
+              <a href='/' className='logo-link'>RenaClic</a>
                 <button className={`toggle ${isMenuOpen ? 'button-close' : 'button-open'}`} onClick={toggleMenu}>
                   {isMenuOpen ? <FaTimes /> : <FaBars />}
                 </button>
