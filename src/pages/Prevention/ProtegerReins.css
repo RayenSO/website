@@ -1,0 +1,132 @@
+.protegerreins {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding-top: 10%;
+    padding-bottom: 5%;
+}
+
+
+.protegerreins .ligne {
+    background-color: #f0f0f0;
+
+}
+
+.protegerreins .ligne1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #ccc;
+}
+.protegerreins img {
+    width: 100%;
+    height: 500px;
+}
+.protegerreins .image-container {
+    position: relative;
+}
+
+.protegerreins .image-text {
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    width: 40%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+
+
+.protegerreins .image-text h2 {
+    font-size: 4.375vw;
+    /* Utilisation de l'unité vw pour la taille du texte */
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+
+
+.protegerreins .two-block {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 0;
+    padding-top: 50px;
+}
+
+.protegerreins .rectangle-content {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr;
+    height: auto;
+    gap: 10px;
+    align-items: flex-end;
+}
+
+
+.protegerreins .rectangle-content .square {
+    background-color: rgba(196, 48, 107, 1);
+}
+
+.protegerreins .rectangle-content .square h3 {
+    margin-top: 0;
+    color: white;
+}
+
+.protegerreins .rectangle-content .square p {
+    margin: 10px 0;
+    color: white;
+}
+
+.protegerreins .rectangle-content .square button {
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+
+.protegerreins .section {
+    background-color: #f0f0f0;
+    padding: 10px;
+}
+
+.protegerreins .section h3 {
+    margin-top: 0;
+}
+
+.protegerreins .section p {
+    margin: 5px 0;
+}
+
+@media (max-width: 768px) {
+    .protegerreins{
+        padding-top: 0;
+    }
+
+    .protegerreins .ligne1 {
+        grid-template-columns: 1fr;
+        padding: 0;
+    }
+
+    .protegerreins .two-block {
+        padding: 0;
+    }
+
+    .protegerreins .two-block .rectangle-content {
+        grid-template-columns: 1fr;
+        /* Mettre en colonne pour les appareils mobiles */
+        width: 100%;
+
+    }
+
+    .protegerreins .rectangle-content .square {
+        width: 100%;
+        height: auto;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    
+
+}

@@ -1,0 +1,131 @@
+.maladierenales {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding-top: 10%;
+    padding-bottom: 5%;
+}
+
+
+.maladierenales .ligne {
+    background-color: #f0f0f0;
+
+}
+
+.maladierenales .ligne1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #ccc;
+}
+.maladierenales .image-container img{
+    height: 100%;
+}
+.maladierenales .image-container {
+    position: relative;
+}
+
+.maladierenales .image-text {
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    width: 40%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+
+
+.maladierenales .image-text h2 {
+    font-size: 4.375vw;
+    /* Utilisation de l'unité vw pour la taille du texte */
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+
+
+.maladierenales .two-block {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 0;
+    padding-top: 50px;
+}
+
+.maladierenales .rectangle-content {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr;
+    height: auto;
+    gap: 10px;
+    align-items: flex-end;
+}
+
+
+.maladierenales .rectangle-content .square {
+    background-color: rgba(196, 48, 107, 1);
+}
+
+.maladierenales .rectangle-content .square h3 {
+    margin-top: 0;
+    color: white;
+}
+
+.maladierenales .rectangle-content .square p {
+    margin: 10px 0;
+    color: white;
+}
+
+.maladierenales .rectangle-content .square button {
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+
+.maladierenales .section {
+    background-color: #f0f0f0;
+    padding: 10px;
+}
+
+.maladierenales .section h3 {
+    margin-top: 0;
+}
+
+.maladierenales .section p {
+    margin: 5px 0;
+}
+
+@media (max-width: 768px) {
+    .maladierenales{
+        padding-top: 0;
+    }
+
+    .maladierenales .ligne1 {
+        grid-template-columns: 1fr;
+        padding: 0;
+    }
+
+    .maladierenales .two-block {
+        padding: 0;
+    }
+
+    .maladierenales .two-block .rectangle-content {
+        grid-template-columns: 1fr;
+        /* Mettre en colonne pour les appareils mobiles */
+        width: 100%;
+
+    }
+
+    .maladierenales .rectangle-content .square {
+        width: 100%;
+        height: auto;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    
+
+}

@@ -78,9 +78,13 @@
 	.menu {
 		grid-template-rows: auto auto auto auto auto;
 		height: auto;
+		position: unset;
 		max-width: 100%;
 	}
-
+	body.menu-open {
+		overflow: hidden;
+	}
+	
 
 	.menu-icon {
 		display: inline;
@@ -97,7 +101,7 @@
 		display: inline;
 		cursor: pointer;
 		position: relative;
-		z-index: 20;
+		z-index: 1000;
 	}
 
 	.mobile-layout .button,

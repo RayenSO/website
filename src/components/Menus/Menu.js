@@ -12,37 +12,37 @@ const Menu = ({ isMenuOpen, toggleMenu }) => {
                     A PROPOS DES REINS
                     <BiChevronDown/>
                     <ul className="sub-menu">
-                        <li><a href='/#'>Les reins et leurs fonctions </a></li>
-                        <li><a href='/#'>Les maladies rénales</a></li>
+                        <li><a href='/les-reins-et-leurs-fonctions'>Les reins et leurs fonctions </a></li>
+                        <li><a href='/les-maladies-renales'>Les maladies rénales</a></li>
                     </ul>
                 </li>
                 <li>
                     PREVENTION
                     <BiChevronDown/>
                     <ul className="sub-menu">
-                        <li><a href='/#'>Dépistage</a></li>
-                        <li><a href='/#'>Protéger ses reins</a></li>
+                        <li><a href='/depistage'>Dépistage</a></li>
+                        <li><a href='/protéger-ses-reins'>Protéger ses reins</a></li>
                     </ul>
                 </li>
                 <li>
                     LES TRAITEMENTS DE SUPPLEANCE
                     <BiChevronDown/>
                     <ul className="sub-menu">
-                        <li><a href='/#'>Avant la dialyse et la greffe</a></li>
-                        <li><a href='/#'>La dialyse</a></li>
-                        <li><a href='/#'>La greffe</a></li>
-                        <li><a href='/#'>Aide au choix</a></li>
+                        <li><a href='/avant-la-dialyse-et-la-greffe'>Avant la dialyse et la greffe</a></li>
+                        <li><a href='/la-dialyse'>La dialyse</a></li>
+                        <li><a href='/la-greffe'>La greffe</a></li>
+                        <li><a href='/aide-au-choix'>Aide au choix</a></li>
                     </ul>
                 </li>
                 <li>
                     VIVRE AVEC LA MALADIE
                     <BiChevronDown/>
                     <ul className="sub-menu">
-                        <li><a href='/#'>Vie et organisation au quotidien</a></li>
-                        <li><a href='/#'>Grossesse et information pour la femme</a></li>
-                        <li><a href='/#'>Gérer son insuffisance rénale</a></li>
-                        <li><a href='/#'>Positive attitude</a></li>
-                        <li><a href='/#'>Droits sociaux</a></li>
+                        <li><a href='/vie-et-organisation-au-quotidien'>Vie et organisation au quotidien</a></li>
+                        <li><a href='/grossesse-et-information-pour-la-femme'>Grossesse et information pour la femme</a></li>
+                        <li><a href='/gérer-son-insuffisance-rénale'>Gérer son insuffisance rénale</a></li>
+                        <li><a href='/positive-attitude'>Positive attitude</a></li>
+                        <li><a href='/droits-sociaux'>Droits sociaux</a></li>
                     </ul>
                 </li>
                 <li><a href="/nutrition">NUTRITION</a></li>
@@ -51,9 +51,9 @@ const Menu = ({ isMenuOpen, toggleMenu }) => {
                     POUR EN SAVOIR PLUS
                     <BiChevronDown/>
                     <ul className="sub-menu">
-                        <li><a href='/#'>Documentation</a></li>
-                        <li><a href='/#'>Echanges</a></li>
-                        <li><a href='/#'>Témoignages</a></li>
+                        <li><a href='/documentation'>Documentation</a></li>
+                        <li><a href='/echanges'>Échanges</a></li>
+                        <li><a href='/temoignagnes'>Témoignages</a></li>
                     </ul>
                 </li>
             </ul>

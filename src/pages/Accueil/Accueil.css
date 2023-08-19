@@ -157,7 +157,7 @@ img {
   z-index: 101;
 }
 
-.square {
+.accueil-square {
   width: 520px;
   height: 300px;
   background-color: rgba(230, 222, 202, 0.9);
@@ -167,18 +167,18 @@ img {
   align-items: center;
 }
 
-.square h2 {
+.accueil-square h2 {
   font-size: 40px;
 
   margin: 0;
   font-family: spinnaker, sans-serif;
 }
 
-.square p {
+.accueil-square p {
   text-align: center;
 }
 
-.square button {
+.accueil-square button {
   font-size: 15px;
   padding: 12px 24px;
   background-color: black;
@@ -193,14 +193,11 @@ img {
 
 @media (max-width: 768px) {
 
-  .full-width-block {
-    padding-top: 20%;
-  }
 
   .grid-section {
-    padding-top: calc(220px);
     grid-template-columns: 1fr;
     grid-template-rows: auto;
+    padding-top: 0;
   }
 
   .grid-block {

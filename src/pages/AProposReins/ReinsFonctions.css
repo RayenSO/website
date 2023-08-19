@@ -1,0 +1,65 @@
+.reinsfonctions {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding-top: 10%;
+    padding-bottom: 5%;
+}
+
+.reinsfonctions .ligne {
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+.reinsfonctions .ligne1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: auto;
+}
+
+.reinsfonctions .image-container {
+    position: relative;
+}
+
+.reinsfonctions .image-text {
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    width: 40%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+.reinsfonctions .image-text h2 {
+    font-size: 4.375vw; /* Utilisation de l'unité vw pour la taille du texte */
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.reinsfonctions .image-text p {
+    font-size: 1vw; 
+    text-align: left;
+}
+
+.reinsfonctions img {
+    width: 100%;
+    height: auto;
+}
+
+
+@media (max-width: 768px) {
+    .reinsfonctions {
+        padding-top: 0%;
+    }
+    .reinsfonctions .ligne1 {
+        grid-template-columns: 1fr; /* Transforme la ligne 1 en colonne */
+    }
+    .reinsfonctions h2 {
+        font-size: 6vw; /* Utilisation de l'unité vw pour la taille du texte */
+        margin-bottom: 5px;
+    }
+    .reinsfonctions .image-text p {
+        font-size: 5vw; /* Utilisation de l'unité vw pour la taille du texte */
+    }
+}
+

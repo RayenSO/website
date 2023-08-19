@@ -39,7 +39,7 @@ function Accueil() {
   const [showPopup, setShowPopup] = useState(true);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
-
+  
 
   useEffect(() => {
     const handleResize = () => {
@@ -69,7 +69,7 @@ function Accueil() {
               className="custom-modal"
               overlayClassName="custom-overlay"
             >
-              <div className="square">
+              <div className="accueil-square">
                 <h2>BIENVENUE SUR</h2>
                 <h2>RENACLIC</h2>
                 <p>La plateforme référence d'information et de prévention pour les personnes concernées par des maladies rénales </p>

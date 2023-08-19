@@ -15,8 +15,7 @@
         height: 100vh;
         background-color: #fff;
         transform: translateY(-100%);
-
-
+        z-index: 999;
         overflow: auto;
     }
 

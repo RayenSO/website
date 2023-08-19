@@ -1,0 +1,57 @@
+.avantdialysegreffe {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding-top: 10.5%;
+    padding-bottom: 5%;
+}
+
+
+.avantdialysegreffe .ligne {
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+
+
+
+.avantdialysegreffe .ligne1 {
+    height: 40vh;
+    width: 100%;
+    background-color: rgba(255, 97, 97, 1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.avantdialysegreffe .titre {
+    font-size: 36px;
+    font-weight: lighter;
+    color: white;
+    margin: 0;
+    /* Réinitialiser les marges par défaut du navigateur */
+}
+
+.avantdialysegreffe p {
+    color: white;
+    margin: 0;
+    font-weight: lighter;
+}
+
+.avantdialysegreffe .tiret {
+    font-size: 80px;
+}
+
+@media (max-width: 768px) {
+    .avantdialysegreffe {
+        padding-top: 0;
+    }
+
+    .avantdialysegreffe .titre {
+        font-size: 22px;
+    }
+
+
+}

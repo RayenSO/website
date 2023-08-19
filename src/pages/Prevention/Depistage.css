@@ -1,0 +1,44 @@
+.depistage {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding-top: 10%;
+    padding-bottom: 5%;
+}
+
+
+.depistage .ligne {
+    background-color: #f0f0f0;
+    text-align: center;
+
+}
+
+
+.depistage .image-container {
+    position: relative;
+}
+
+.depistage .image-text {
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    width: 40%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+.depistage .image-text h2 {
+    font-size: 4.375vw; /* Utilisation de l'unité vw pour la taille du texte */
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.depistage .image-text p {
+    font-size: 1vw; 
+    text-align: left;
+}
+
+.depistage img {
+    width: 100%;
+    height: 500px;
+}
